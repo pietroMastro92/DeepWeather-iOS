@@ -1,0 +1,18 @@
+# Tuist / Xcode generated artifacts
+*.xcodeproj
+*.xcworkspace
+Derived/
+.build/
+DerivedData/
+
+# macOS
+.DS_Store
+
+# Xcode user data
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+
+# Archives / exports
+*.ipa
+*.xcarchive
