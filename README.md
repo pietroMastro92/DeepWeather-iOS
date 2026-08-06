@@ -2,7 +2,7 @@
 
 Native iOS port of [DeepWeather](https://github.com/pietroMastro92/DeepWeather): full dashboard with current conditions, charts, moon phases, hourly strip and 3-day forecast — plus a home/lock screen widget, local weather notifications and an iPad-optimized layout.
 
-> Companion to the macOS menu bar app in the [DeepWeather monorepo](https://github.com/pietroMastro92/DeepWeather). This repository is a standalone Tuist project for iOS.
+> Companion to the macOS menu bar app in the [DeepWeather monorepo](https://github.com/pietroMastro92/DeepWeather). This repository is the **standalone** Tuist project for iOS (recommended source of truth for the iOS app).
 
 ## Features
 
@@ -23,6 +23,8 @@ Native iOS port of [DeepWeather](https://github.com/pietroMastro92/DeepWeather):
 Requires Xcode 26+ and [Tuist](https://tuist.dev) (`brew install tuist`).
 
 ```bash
+git clone https://github.com/pietroMastro92/DeepWeather-iOS.git
+cd DeepWeather-iOS
 ./run-ios.sh               # generate project, build, boot simulator, install and launch
 ```
 
@@ -55,6 +57,10 @@ Then upload with `xcrun altool --upload-app -f .build/Export/DeepWeather.ipa -t 
 - Weather data: [wttr.in](https://wttr.in) (WorldWeatherOnline data, `format=j1`)
 - Geocoding: [Open-Meteo Geocoding API](https://open-meteo.com) (no API key required)
 
+## Related
+
+- **macOS menu bar app** (sibling product): [pietroMastro92/DeepWeather](https://github.com/pietroMastro92/DeepWeather)
+
 ## License
 
-[MIT](LICENSE)
+[MIT](./LICENSE)
