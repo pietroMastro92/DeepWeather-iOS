@@ -497,6 +497,21 @@ struct DeepWeatherTests {
         #expect(WeatherIconMapper.animationKind(for: "338", isDay: true) == .snow)
     }
 
+    @Test("WeatherIconMapper stylized symbols uniformity")
+    func testWeatherIconMapperSymbols() {
+        #expect(WeatherIconMapper.symbol(for: "113", isDay: true) == "sun.max")
+        #expect(WeatherIconMapper.symbol(for: "113", isDay: false) == "moon.stars")
+        #expect(WeatherIconMapper.symbol(for: "116", isDay: true) == "cloud.sun")
+        #expect(WeatherIconMapper.symbol(for: "116", isDay: false) == "cloud.moon")
+        #expect(WeatherIconMapper.symbol(for: "119", isDay: true) == "cloud")
+        #expect(WeatherIconMapper.symbol(for: "122", isDay: true) == "cloud")
+        #expect(WeatherIconMapper.symbol(for: "248", isDay: true) == "cloud.fog")
+        #expect(WeatherIconMapper.symbol(for: "296", isDay: true) == "cloud.drizzle")
+        #expect(WeatherIconMapper.symbol(for: "308", isDay: true) == "cloud.rain")
+        #expect(WeatherIconMapper.symbol(for: "338", isDay: true) == "cloud.snow")
+        #expect(WeatherIconMapper.symbol(for: "389", isDay: true) == "cloud.bolt.rain")
+    }
+
     @Test("Weather detail items (UV, pressure, visibility, precipitation) completeness")
     @MainActor
     func testDetailGridItemsCompleteness() {

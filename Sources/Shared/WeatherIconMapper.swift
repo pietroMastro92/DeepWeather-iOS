@@ -13,11 +13,11 @@ enum WeatherAnimationKind {
 /// Maps WorldWeatherOnline weather codes (used by wttr.in) to SF Symbols.
 enum WeatherIconMapper {
     static func symbol(for code: String?, isDay: Bool) -> String {
-        guard let code, let value = Int(code) else { return "cloud.sun" }
+        guard let code, let value = Int(code) else { return isDay ? "cloud.sun" : "cloud.moon" }
         switch value {
         case 113: return isDay ? "sun.max" : "moon.stars"
         case 116: return isDay ? "cloud.sun" : "cloud.moon"
-        case 119, 122: return "smoke.fill"
+        case 119, 122: return "cloud"
         case 143, 248, 260: return "cloud.fog"
         case 176, 263, 266, 281, 284, 293, 296: return "cloud.drizzle"
         case 299, 302, 305, 308, 353, 356, 359: return "cloud.rain"
@@ -25,7 +25,7 @@ enum WeatherIconMapper {
         case 179, 182, 323, 326, 329, 332, 335, 338, 350, 368, 371: return "cloud.snow"
         case 227, 230: return "wind.snow"
         case 200, 386, 389, 392, 395: return "cloud.bolt.rain"
-        default: return "cloud.sun"
+        default: return isDay ? "cloud.sun" : "cloud.moon"
         }
     }
 

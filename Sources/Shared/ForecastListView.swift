@@ -73,9 +73,8 @@ private struct ForecastDayRow: View {
             // Weather Icon & Rain Chance Stack
             VStack(spacing: 2) {
                 Image(systemName: day.symbol)
-                    .renderingMode(.original)
-                    .font(.system(size: 18))
-                    .symbolRenderingMode(.hierarchical)
+                    .font(.system(size: 18, weight: .medium))
+                    .foregroundStyle(.white)
                     .frame(height: 20)
 
                 if day.precipChance >= 5 {

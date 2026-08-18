@@ -55,9 +55,8 @@ private struct HourlyItemColumn: View {
 
             // Weather Glyph
             Image(systemName: item.symbol)
-                .renderingMode(.original)
-                .font(.system(size: 20))
-                .symbolRenderingMode(.hierarchical)
+                .font(.system(size: 20, weight: .medium))
+                .foregroundStyle(.white)
                 .frame(height: 22)
                 .shadow(color: isNow ? .white.opacity(0.4) : .clear, radius: 4)
 
