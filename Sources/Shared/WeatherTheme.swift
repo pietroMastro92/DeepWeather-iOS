@@ -30,19 +30,19 @@ struct WeatherTheme {
 extension WeatherTheme {
     static let sunny = WeatherTheme(
         heroGradient: [
-            Color(red: 1.00, green: 0.80, blue: 0.38),
-            Color(red: 0.99, green: 0.58, blue: 0.28),
-            Color(red: 0.38, green: 0.66, blue: 0.95)
+            Color(red: 0.18, green: 0.46, blue: 0.84),
+            Color(red: 0.26, green: 0.56, blue: 0.90),
+            Color(red: 0.38, green: 0.65, blue: 0.94)
         ],
-        accent: Color(red: 0.95, green: 0.60, blue: 0.22),
+        accent: Color(red: 1.0, green: 0.82, blue: 0.25),
         heroText: .white
     )
 
     static let clearNight = WeatherTheme(
         heroGradient: [
-            Color(red: 0.33, green: 0.38, blue: 0.75),
-            Color(red: 0.50, green: 0.32, blue: 0.68),
-            Color(red: 0.13, green: 0.17, blue: 0.45)
+            Color(red: 0.10, green: 0.14, blue: 0.35),
+            Color(red: 0.16, green: 0.22, blue: 0.48),
+            Color(red: 0.22, green: 0.28, blue: 0.56)
         ],
         accent: Color(red: 0.65, green: 0.55, blue: 0.90),
         heroText: .white
@@ -50,17 +50,18 @@ extension WeatherTheme {
 
     static let partlyCloudy = WeatherTheme(
         heroGradient: [
-            Color(red: 0.52, green: 0.76, blue: 0.94),
-            Color(red: 0.42, green: 0.60, blue: 0.83)
+            Color(red: 0.30, green: 0.56, blue: 0.86),
+            Color(red: 0.42, green: 0.66, blue: 0.89),
+            Color(red: 0.50, green: 0.70, blue: 0.91)
         ],
-        accent: Color(red: 0.30, green: 0.60, blue: 0.90),
+        accent: Color(red: 0.98, green: 0.75, blue: 0.25),
         heroText: .white
     )
 
     static let partlyCloudyNight = WeatherTheme(
         heroGradient: [
-            Color(red: 0.22, green: 0.28, blue: 0.60),
-            Color(red: 0.40, green: 0.38, blue: 0.68)
+            Color(red: 0.15, green: 0.20, blue: 0.44),
+            Color(red: 0.24, green: 0.28, blue: 0.52)
         ],
         accent: Color(red: 0.55, green: 0.50, blue: 0.85),
         heroText: .white
@@ -68,10 +69,11 @@ extension WeatherTheme {
 
     static let cloudy = WeatherTheme(
         heroGradient: [
-            Color(red: 0.55, green: 0.62, blue: 0.74),
-            Color(red: 0.38, green: 0.46, blue: 0.60)
+            Color(red: 0.46, green: 0.54, blue: 0.66),
+            Color(red: 0.52, green: 0.60, blue: 0.70),
+            Color(red: 0.40, green: 0.48, blue: 0.60)
         ],
-        accent: Color(red: 0.45, green: 0.55, blue: 0.68),
+        accent: Color(red: 0.60, green: 0.70, blue: 0.82),
         heroText: .white
     )
 

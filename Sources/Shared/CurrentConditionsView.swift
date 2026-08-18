@@ -72,7 +72,7 @@ private struct LocationSwitcherMenu: View {
             Button {
                 onSelect(nil)
             } label: {
-                Label("Automatic (IP)", systemImage: selectedLocationID == nil ? "checkmark" : "location")
+                Label(String(localized: "Automatic (IP)"), systemImage: selectedLocationID == nil ? "checkmark" : "location")
             }
 
             if !locations.isEmpty {

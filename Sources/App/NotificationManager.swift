@@ -47,19 +47,24 @@ enum NotificationManager {
         }
 
         if rainAlertEnabled, let rain = rainChanceTomorrow(weather: weather), rain >= rainThreshold {
-            var components = DateComponents()
+            let calendar = Calendar.current
+            var components = calendar.dateComponents([.year, .month, .day], from: Date())
             components.hour = 19
             components.minute = 0
-            let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
-            let content = UNMutableNotificationContent()
-            content.title = String(localized: "DeepWeather")
-            content.body = "\(String(localized: "Rain likely tomorrow. Remember an umbrella.")) \(rain)%."
-            content.sound = .default
-            try? await center.add(UNNotificationRequest(
-                identifier: rainAlertIdentifier,
-                content: content,
-                trigger: trigger
-            ))
+
+            // Schedule for today at 19:00 if not already passed, without infinite daily repetition
+            if let targetDate = calendar.date(from: components), targetDate > Date() {
+                let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
+                let content = UNMutableNotificationContent()
+                content.title = String(localized: "DeepWeather")
+                content.body = "\(String(localized: "Rain likely tomorrow. Remember an umbrella.")) \(rain)%."
+                content.sound = .default
+                try? await center.add(UNNotificationRequest(
+                    identifier: rainAlertIdentifier,
+                    content: content,
+                    trigger: trigger
+                ))
+            }
         }
     }
 
@@ -75,7 +80,9 @@ enum NotificationManager {
         guard let day = weather?.weather?.first else {
             return String(localized: "Open DeepWeather to see today's forecast.")
         }
-        let condition = day.hourly?.first?.conditionDescription ?? String(localized: "Weather")
+        let representative = (day.hourly ?? []).first { $0.hour == 12 }
+            ?? (day.hourly ?? []).first
+        let condition = representative?.conditionDescription ?? String(localized: "Weather")
         let min = tempString(day.mintempC, day.mintempF, useMetric: useMetric)
         let max = tempString(day.maxtempC, day.maxtempF, useMetric: useMetric)
         let rain = (day.hourly ?? []).compactMap { Int($0.chanceofrain ?? "") }.max() ?? 0

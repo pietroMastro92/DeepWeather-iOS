@@ -11,8 +11,7 @@ let project = Project(
             deploymentTargets: .iOS("17.0"),
             infoPlist: .extendingDefault(with: [
                 "UILaunchScreen": [
-                    "UIColorName": "LaunchBackground",
-                    "UIImageName": "LaunchLogo"
+                    "UIColorName": "LaunchBackground"
                 ],
                 "NSLocationWhenInUseUsageDescription": "DeepWeather uses your location to show local weather when no city is selected.",
                 "UISupportedInterfaceOrientations": [
@@ -54,12 +53,7 @@ let project = Project(
             ]),
             sources: [
                 "Widget/**",
-                "Sources/Shared/AppGroup.swift",
-                "Sources/Shared/WeatherSnapshot.swift",
-                "Sources/Shared/WeatherModel.swift",
-                "Sources/Shared/WeatherClient.swift",
-                "Sources/Shared/WeatherIconMapper.swift",
-                "Sources/Shared/SavedLocation.swift"
+                "Sources/Shared/**"
             ],
             entitlements: .file(path: "DeepWeatherWidget.entitlements"),
             settings: .settings(base: [
@@ -82,7 +76,9 @@ let project = Project(
                 .target(name: "DeepWeather-iOS")
             ],
             settings: .settings(base: [
-                "SWIFT_VERSION": "6.0"
+                "SWIFT_VERSION": "6.0",
+                "TEST_HOST": "$(BUILT_PRODUCTS_DIR)/DeepWeather.app/DeepWeather",
+                "BUNDLE_LOADER": "$(TEST_HOST)"
             ])
         )
     ]

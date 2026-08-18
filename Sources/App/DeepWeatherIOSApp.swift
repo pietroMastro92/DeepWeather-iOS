@@ -4,16 +4,13 @@ import SwiftUI
 struct DeepWeatherIOSApp: App {
     @State private var store = WeatherStore()
     @State private var locationManager = LocationManager()
-    @State private var showSplash = true
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some Scene {
         WindowGroup {
             Group {
-                if showSplash {
-                    SplashView()
-                } else if !store.isOnboarded {
-                    WelcomeView(store: store)
+                if !store.isOnboarded {
+                    OnboardingWizardView(store: store, locationManager: locationManager)
                 } else {
                     DashboardView(store: store, locationManager: locationManager)
                 }
@@ -28,8 +25,6 @@ struct DeepWeatherIOSApp: App {
 
     @MainActor
     private func boot() async {
-        try? await Task.sleep(for: .milliseconds(1600))
-        withAnimation(.easeInOut(duration: 0.4)) { showSplash = false }
         store.startAutoRefresh(immediately: false)
         if store.isOnboarded {
             await refreshWeather()
@@ -38,8 +33,9 @@ struct DeepWeatherIOSApp: App {
 
     @MainActor
     private func refreshWeather() async {
-        if store.selectedLocationID == nil {
-            if let coordinate = await locationManager.requestLocation() {
+        // Only request GPS if the user explicitly chose automatic GPS mode
+        if store.selectedLocationID == nil && store.isAutomaticGPSActive {
+            if let coordinate = await locationManager.requestLocation(forceFresh: true) {
                 store.setAutomaticCoordinate(latitude: coordinate.latitude, longitude: coordinate.longitude)
             }
         }
