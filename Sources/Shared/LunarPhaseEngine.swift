@@ -24,23 +24,50 @@ struct LunarPhaseEngine: Sendable {
         let ageDays: Double
     }
 
-    /// Computes the exact moon state for any given date.
-    static func calculate(for date: Date = Date()) -> MoonState {
+    /// Returns the exact lunar phase in [0.0, 1.0)
+    /// 0.0 = New Moon, 0.25 = First Quarter, 0.50 = Full Moon, 0.75 = Last Quarter
+    static func phase(for date: Date = Date()) -> Double {
         let diffSeconds = date.timeIntervalSince(referenceNewMoon)
         let diffDays = diffSeconds / 86400.0
-
-        // Calculate phase in [0.0, 1.0)
-        var phase = (diffDays.truncatingRemainder(dividingBy: synodicMonth)) / synodicMonth
-        if phase < 0 {
-            phase += 1.0
+        var p = (diffDays.truncatingRemainder(dividingBy: synodicMonth)) / synodicMonth
+        if p < 0 {
+            p += 1.0
         }
+        return p
+    }
 
-        let ageDays = phase * synodicMonth
-        // Illumination: 0% at New Moon (0.0), 100% at Full Moon (0.5), 0% at New Moon (1.0)
-        let illumination = (1.0 - cos(phase * 2.0 * .pi)) / 2.0
-        let illuminationPercent = max(0, min(100, Int(round(illumination * 100.0))))
+    /// Returns the illumination fraction [0.0, 1.0]
+    static func illumination(for date: Date = Date()) -> Double {
+        let p = phase(for: date)
+        return (1.0 - cos(p * 2.0 * .pi)) / 2.0
+    }
 
-        let (name, symbol) = phaseNameAndSymbol(for: phase)
+    /// Computes the normalized 3D Moon-to-Sun illumination direction vector
+    /// based on the lunar phase and observer latitude (for hemisphere orientation).
+    static func moonToSunDirection(for date: Date = Date(), latitude: Double = 45.0) -> (Float, Float, Float) {
+        let p = phase(for: date)
+        let angle = Float(p * 2.0 * .pi)
+
+        // In Northern Hemisphere (lat >= 0), Waxing (0..0.5) is illuminated on Right (+X).
+        // In Southern Hemisphere (lat < 0), the crescent orientation is inverted (-X).
+        let hemisphereSign: Float = latitude < 0 ? -1.0 : 1.0
+
+        let x = sin(angle) * hemisphereSign
+        let y: Float = 0.05 * cos(angle) // Subtle orbital inclination
+        let z = -cos(angle)
+
+        let len = sqrt(x * x + y * y + z * z)
+        return (x / len, y / len, z / len)
+    }
+
+    /// Computes the exact moon state for any given date.
+    static func calculate(for date: Date = Date()) -> MoonState {
+        let p = phase(for: date)
+        let ageDays = p * synodicMonth
+        let illum = illumination(for: date)
+        let illuminationPercent = max(0, min(100, Int(round(illum * 100.0))))
+
+        let (name, symbol) = phaseNameAndSymbol(for: p)
 
         return MoonState(
             phaseName: name,

@@ -21,7 +21,7 @@ struct OnboardingWizardView: View {
     @State private var useGPS: Bool = false
     @State private var isRequestingGPS: Bool = false
 
-    @State private var useMetric: Bool = true
+    @State private var useMetric: Bool = WeatherStore.defaultUseMetric
     @State private var dailySummary: Bool = false
 
     @FocusState private var searchFieldFocused: Bool

@@ -98,7 +98,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Open-Meteo (Modelli ufficiali)"
+            "value": "Open-Meteo (Modelli Ufficiali)"
           }
         }
       }
@@ -166,7 +166,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Aggregatore multi-sorgente ASCII della community"
+            "value": "Aggregatore multi-sorgente della community"
           }
         }
       }
@@ -183,7 +183,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "La modalità automatica usa modelli meteorologici nazionali diretti con protezione intelligente dalle anomalie e fallback."
+            "value": "La modalità Auto usa modelli meteorologici nazionali diretti con protezione automatica da anomalie e failover."
           }
         }
       }
@@ -251,7 +251,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "PROBABILITÀ PRECIPITAZIONI"
+            "value": "PROBABILITÀ DI PIOGGIA"
           }
         }
       }
@@ -353,7 +353,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Allerta gialla"
+            "value": "Avviso giallo"
           }
         }
       }
@@ -387,7 +387,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Allerta arancione per ondata di calore estrema"
+            "value": "Allerta arancione per ondata di calore"
           }
         }
       }
@@ -438,7 +438,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Allerta gialla per basse temperature e gelate"
+            "value": "Allerta gialla per gelo e brinate"
           }
         }
       }
@@ -455,7 +455,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Allerta arancione per venti di burrasca forte"
+            "value": "Allerta arancione per burrasca"
           }
         }
       }
@@ -472,7 +472,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Allerta gialla per forti raffiche di vento"
+            "value": "Allerta gialla per venti forti"
           }
         }
       }
@@ -540,7 +540,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Condizioni previste tra la notte e il primo mattino"
+            "value": "Condizioni previste durante la notte e primo mattino"
           }
         }
       }
@@ -591,7 +591,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ulteriore allerta: %@"
+            "value": "Allerta aggiuntiva: %@"
           }
         }
       }
@@ -608,7 +608,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Allerte meteo ufficiali"
+            "value": "Avvisi meteorologici ufficiali"
           }
         }
       }
@@ -829,7 +829,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pioggia debole"
+            "value": "Pioggia leggera"
           }
         }
       }
@@ -1305,7 +1305,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Automatica (GPS)"
+            "value": "Automatico (GPS)"
           }
         }
       }
@@ -1458,7 +1458,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Imperiali (°F, mph)"
+            "value": "Imperiale (°F, mph)"
           }
         }
       }
@@ -1526,7 +1526,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Metriche (°C, km/h)"
+            "value": "Metrico (°C, km/h)"
           }
         }
       }
@@ -1611,7 +1611,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Avviso pioggia"
+            "value": "Allerta pioggia"
           }
         }
       }
@@ -1645,7 +1645,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Probabile pioggia domani. Ricordati l'ombrello."
+            "value": "Pioggia probabile domani. Ricorda l'ombrello."
           }
         }
       }
@@ -1730,7 +1730,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ricerca…"
+            "value": "Ricerca in corso…"
           }
         }
       }
@@ -1764,7 +1764,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ora"
+            "value": "Orario"
           }
         }
       }
@@ -1781,7 +1781,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Unità"
+            "value": "Unità di misura"
           }
         }
       }
@@ -1815,7 +1815,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Le notifiche meteo vengono pianificate solo su questo dispositivo."
+            "value": "Le notifiche meteo sono programmate solo su questo dispositivo."
           }
         }
       }
@@ -2138,7 +2138,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cerca la tua città o usa il GPS. Nessuna posizione automatica forzata."
+            "value": "Cerca la tua città o scegli il GPS. Nessuna posizione automatica forzata."
           }
         }
       }
@@ -2189,7 +2189,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Richiede il permesso di localizzazione"
+            "value": "Richiede autorizzazione posizione"
           }
         }
       }
@@ -2240,7 +2240,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Inizia a esplorare"
+            "value": "Inizia ad esplorare"
           }
         }
       }
@@ -2257,7 +2257,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Rifai setup iniziale"
+            "value": "Riavvia configurazione iniziale"
           }
         }
       }
@@ -2309,6 +2309,1536 @@
           "stringUnit": {
             "state": "translated",
             "value": "Previsioni accurate, animate con eleganza."
+          }
+        }
+      }
+    },
+    "%lld-DAY FORECAST": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld-DAY FORECAST"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PREVISIONI PER %lld GIORNI"
+          }
+        }
+      }
+    },
+    "\\(count)-DAY FORECAST": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld-DAY FORECAST"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PREVISIONI PER %lld GIORNI"
+          }
+        }
+      }
+    },
+    "Restart": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restart"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Riavvia"
+          }
+        }
+      }
+    },
+    "Would you like to restart the onboarding flow to reconfigure your location and preferences?": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Would you like to restart the onboarding flow to reconfigure your location and preferences?"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vuoi riavviare la configurazione iniziale per reimpostare posizione e preferenze?"
+          }
+        }
+      }
+    },
+    "Uses your current GPS coordinates": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uses your current GPS coordinates"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usa le coordinate GPS attuali"
+          }
+        }
+      }
+    },
+    "Automatic (IP)": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Automatic (IP)"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Automatico (IP)"
+          }
+        }
+      }
+    },
+    "Swipe to delete or drag to reorder your saved locations.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Swipe to delete or drag to reorder your saved locations."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scorri per eliminare o trascina per riordinare le località salvate."
+          }
+        }
+      }
+    },
+    "Refresh now": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Refresh now"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aggiorna ora"
+          }
+        }
+      }
+    },
+    "Morning weather forecast notification": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Morning weather forecast notification"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notifica con le previsioni del mattino"
+          }
+        }
+      }
+    },
+    "Setup": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Setup"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Configurazione"
+          }
+        }
+      }
+    },
+    "Reconfigure your primary location and preferences.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reconfigure your primary location and preferences."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Riconfigura la tua posizione principale e le preferenze."
+          }
+        }
+      }
+    },
+    "Information": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Information"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Informazioni"
+          }
+        }
+      }
+    },
+    "Weather data": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weather data"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dati meteo"
+          }
+        }
+      }
+    },
+    "Geocoding": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geocoding"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geocodifica"
+          }
+        }
+      }
+    },
+    "Privacy": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privacy"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privacy"
+          }
+        }
+      }
+    },
+    "Local-first: no data leaves your device except for anonymous weather queries.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Local-first: no data leaves your device except for anonymous weather queries."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Locale prima di tutto: nessun dato lascia il dispositivo eccetto query meteo anonime."
+          }
+        }
+      }
+    },
+    "Low for the rest of the day": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Low for the rest of the day"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Basso per il resto del giorno"
+          }
+        }
+      }
+    },
+    "Moderate risk": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Moderate risk"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rischio moderato"
+          }
+        }
+      }
+    },
+    "High protection required": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "High protection required"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Protezione alta richiesta"
+          }
+        }
+      }
+    },
+    "Very high risk": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Very high risk"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rischio molto alto"
+          }
+        }
+      }
+    },
+    "Moisture level in the air": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Moisture level in the air"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Umidità dell'aria"
+          }
+        }
+      }
+    },
+    "Surface air currents": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Surface air currents"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Correnti d'aria in superficie"
+          }
+        }
+      }
+    },
+    "Perceived temperature": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Perceived temperature"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temperatura percepita"
+          }
+        }
+      }
+    },
+    "Atmospheric pressure": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atmospheric pressure"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pressione atmosferica"
+          }
+        }
+      }
+    },
+    "Distance of clear sight": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distance of clear sight"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distanza di visibilità"
+          }
+        }
+      }
+    },
+    "Expected total": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expected total"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Totale previsto"
+          }
+        }
+      }
+    },
+    "Sky coverage": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sky coverage"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copertura del cielo"
+          }
+        }
+      }
+    },
+    "Morning solar rise": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Morning solar rise"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alba del mattino"
+          }
+        }
+      }
+    },
+    "Evening twilight": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Evening twilight"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Crepuscolo serale"
+          }
+        }
+      }
+    },
+    "Day": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Day"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Giorno"
+          }
+        }
+      }
+    },
+    "Request timed out.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Request timed out."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Richiesta scaduta."
+          }
+        }
+      }
+    },
+    "No internet connection.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No internet connection."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nessuna connessione internet."
+          }
+        }
+      }
+    },
+    "Couldn't read the weather data.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Couldn't read the weather data."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossibile leggere i dati meteo."
+          }
+        }
+      }
+    },
+    "Mappa Luce e Ombra": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sun & Shadow Map"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mappa Luce e Ombra"
+          }
+        }
+      }
+    },
+    "Luce & Ombra": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sun & Shadow"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luce & Ombra"
+          }
+        }
+      }
+    },
+    "Trova Ombra": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seek Shade"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trova Ombra"
+          }
+        }
+      }
+    },
+    "Cerca Sole": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seek Sun"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cerca Sole"
+          }
+        }
+      }
+    },
+    "Elevazione": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elevation"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elevazione"
+          }
+        }
+      }
+    },
+    "Rapporto Ombra": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shadow Ratio"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rapporto Ombra"
+          }
+        }
+      }
+    },
+    "Direzione": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Direction"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Direzione"
+          }
+        }
+      }
+    },
+    "Sole sotto l'orizzonte": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sun below horizon"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sole sotto l'orizzonte"
+          }
+        }
+      }
+    },
+    "Tocca per simulatore 24h e mappa 3D": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap for 24h simulator and 3D map"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tocca per simulatore 24h e mappa 3D"
+          }
+        }
+      }
+    },
+    "Chiudi mappa": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Close map"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chiudi mappa"
+          }
+        }
+      }
+    },
+    "Centra Posizione": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Center Location"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Centra Posizione"
+          }
+        }
+      }
+    },
+    "Stile Mappa": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Map Style"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stile Mappa"
+          }
+        }
+      }
+    },
+    "Vettoriale Chiara": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Light Vector"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vettoriale Chiara"
+          }
+        }
+      }
+    },
+    "Vettoriale Scura": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dark Vector"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vettoriale Scura"
+          }
+        }
+      }
+    },
+    "Alba": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunrise"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alba"
+          }
+        }
+      }
+    },
+    "Mezzogiorno": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solar Noon"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mezzogiorno"
+          }
+        }
+      }
+    },
+    "Golden Hour": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Golden Hour"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Golden Hour"
+          }
+        }
+      }
+    },
+    "Tramonto": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunset"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tramonto"
+          }
+        }
+      }
+    },
+    "Azimut": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Azimuth"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Azimut"
+          }
+        }
+      }
+    },
+    "Edifici": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buildings"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Edifici"
+          }
+        }
+      }
+    },
+    "UV / Nubi": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "UV / Clouds"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "UV / Nubi"
+          }
+        }
+      }
+    },
+    "Orario": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Time"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Orario"
+          }
+        }
+      }
+    },
+    "Ora": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Now"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ora"
+          }
+        }
+      }
+    },
+    "Simulazione": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Simulation"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Simulazione"
+          }
+        }
+      }
+    },
+    "Ora locale": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Local time"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ora locale"
+          }
+        }
+      }
+    },
+    "Sole": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sun"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sole"
+          }
+        }
+      }
+    },
+    "Ombra Netta e Marcata": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Crisp Sharp Shadow"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ombra Netta e Marcata"
+          }
+        }
+      }
+    },
+    "Ombra Morbida / Filtrata": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Soft / Diffuse Shadow"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ombra Morbida / Filtrata"
+          }
+        }
+      }
+    },
+    "Luce Diffusa (Coperto)": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diffuse Light (Overcast)"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luce Diffusa (Coperto)"
+          }
+        }
+      }
+    },
+    "Notte (Nessuna Ombra)": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Night (No Shadow)"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notte (Nessuna Ombra)"
+          }
+        }
+      }
+    },
+    "Netta": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Crisp"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Netta"
+          }
+        }
+      }
+    },
+    "Morbida": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Soft"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Morbida"
+          }
+        }
+      }
+    },
+    "Assente": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "None"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Assente"
+          }
+        }
+      }
+    },
+    "Notte": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Night"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notte"
+          }
+        }
+      }
+    },
+    "Nessuna ombra solare diretta": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No direct solar shadow"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nessuna ombra solare diretta"
+          }
+        }
+      }
+    },
+    "Nessun irraggiamento solare": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No direct solar radiation"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nessun irraggiamento solare"
+          }
+        }
+      }
+    },
+    "Notte: nessuna radiazione solare diretta.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Night: no direct solar radiation."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notte: nessuna radiazione solare diretta."
+          }
+        }
+      }
+    },
+    "Il sole è sotto l'orizzonte. Nessuna zona di ombra solare diretta attiva.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The sun is below the horizon. No direct solar shadow active."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Il sole è sotto l'orizzonte. Nessuna zona di ombra solare diretta attiva."
+          }
+        }
+      }
+    },
+    "Cielo coperto con luce diffusa. L'esposizione solare diretta è minima su tutti i lati.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Overcast sky with diffuse light. Direct sun exposure is minimal on all sides."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cielo coperto con luce diffusa. L'esposizione solare diretta è minima su tutti i lati."
+          }
+        }
+      }
+    },
+    "Nord": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "North"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nord"
+          }
+        }
+      }
+    },
+    "Nord-Est": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "North-East"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nord-Est"
+          }
+        }
+      }
+    },
+    "Est": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "East"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Est"
+          }
+        }
+      }
+    },
+    "Sud-Est": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "South-East"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sud-Est"
+          }
+        }
+      }
+    },
+    "Sud": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "South"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sud"
+          }
+        }
+      }
+    },
+    "Sud-Ovest": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "South-West"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sud-Ovest"
+          }
+        }
+      }
+    },
+    "Ovest": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "West"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ovest"
+          }
+        }
+      }
+    },
+    "Nord-Ovest": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "North-West"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nord-Ovest"
+          }
+        }
+      }
+    },
+    "Lato %@ in ombra": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shaded side: %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lato %@ in ombra"
+          }
+        }
+      }
+    },
+    "Lato %@ al sole": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunny side: %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lato %@ al sole"
+          }
+        }
+      }
+    },
+    "Expected maximum temperatures up to %@ with high bioclimatic stress. Avoid exposure during peak hours and stay hydrated.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expected maximum temperatures up to %@ with high bioclimatic stress. Avoid exposure during peak hours and stay hydrated."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Previste temperature massime fino a %@ con elevato stress bioclimatico. Evitare l'esposizione nelle ore centrali e idratarsi."
+          }
+        }
+      }
+    },
+    "Expected minimum temperatures down to %@ with frost and ground icing risk. Exercise extreme caution while driving.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expected minimum temperatures down to %@ with frost and ground icing risk. Exercise extreme caution while driving."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Previste temperature minime fino a %@ con rischio di gelate e ghiaccio al suolo. Prestare la massima attenzione alla guida."
+          }
+        }
+      }
+    },
+    "Expected wind gusts up to %@ with possible disruption to travel and rough seas.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expected wind gusts up to %@ with possible disruption to travel and rough seas."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Previste raffiche di vento fino a %@ con possibili disagi alla viabilità e mareggiate."
+          }
+        }
+      }
+    },
+    "Thunderstorms expected with possible frequent lightning, localized hail and intense rain showers.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thunderstorms expected with possible frequent lightning, localized hail and intense rain showers."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Previsti temporali con possibile frequente attività elettrica, grandinate locali e rovesci intensi."
+          }
+        }
+      }
+    },
+    "Il sole è a %@ (%lld°). Per muoverti all'ombra, cammina sul marciapiede a %@ (%lld°), protetto dagli edifici (lunghezza ombra %@ altezza).": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sun is at %@ (%lld°). To walk in the shade, choose the sidewalk at %@ (%lld°), protected by buildings (shadow length %@ height)."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Il sole è a %@ (%lld°). Per muoverti all'ombra, cammina sul marciapiede a %@ (%lld°), protetto dagli edifici (lunghezza ombra %@ altezza)."
+          }
+        }
+      }
+    },
+    "Il sole splende da %@ (%lld°). Per goderti la luce, scegli strade aperte orientate verso %@ e cammina sul marciapiede esposto a Sud/Ovest.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sun shines from %@ (%lld°). To enjoy the sunshine, choose open streets facing %@ and walk on south/west facing sidewalks."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Il sole splende da %@ (%lld°). Per goderti la luce, scegli strade aperte orientate verso %@ e cammina sul marciapiede esposto a Sud/Ovest."
+          }
+        }
+      }
+    },
+    "Metric system": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Metric system"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sistema metrico"
+          }
+        }
+      }
+    },
+    "Imperial system": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Imperial system"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sistema imperiale"
           }
         }
       }

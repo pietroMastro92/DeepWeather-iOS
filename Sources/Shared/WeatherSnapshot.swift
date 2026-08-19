@@ -7,7 +7,7 @@ struct WeatherSnapshot: Codable {
     var lastUpdated: Date?
     var locationName: String?
     var locationDetail: String?
-    var useMetric: Bool = true
+    var useMetric: Bool = (Locale.autoupdatingCurrent.measurementSystem != .us)
     var latitude: Double?
     var longitude: Double?
     var dailySummaryEnabled: Bool = false

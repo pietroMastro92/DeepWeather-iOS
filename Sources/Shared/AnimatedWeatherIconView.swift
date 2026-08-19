@@ -19,6 +19,10 @@ struct AnimatedWeatherIconView: View {
                 case .sun, .moon:
                     baseIcon
                         .symbolEffect(.pulse, options: .repeating)
+                case .partlyCloudy:
+                    baseIcon
+                        .symbolEffect(.pulse.byLayer, options: .speed(0.6).repeating)
+                        .offset(x: cloudDrift ? -4 : 4)
                 case .rain, .snow:
                     baseIcon
                         .symbolEffect(.variableColor.iterative, options: .repeating)

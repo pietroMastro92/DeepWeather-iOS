@@ -2,6 +2,10 @@ import ProjectDescription
 
 let project = Project(
     name: "DeepWeather-iOS",
+    options: .options(
+        defaultKnownRegions: ["en", "it", "Base"],
+        developmentRegion: "en"
+    ),
     targets: [
         .target(
             name: "DeepWeather-iOS",
@@ -10,6 +14,9 @@ let project = Project(
             bundleId: "com.pietromastro.deepweather",
             deploymentTargets: .iOS("17.0"),
             infoPlist: .extendingDefault(with: [
+                "CFBundleDevelopmentRegion": "$(DEVELOPMENT_LANGUAGE)",
+                "CFBundleLocalizations": ["en", "it"],
+                "CFBundleAllowMixedLocalizations": true,
                 "UILaunchScreen": [
                     "UIColorName": "LaunchBackground"
                 ],
@@ -46,6 +53,9 @@ let project = Project(
             bundleId: "com.pietromastro.deepweather.widget",
             deploymentTargets: .iOS("17.0"),
             infoPlist: .extendingDefault(with: [
+                "CFBundleDevelopmentRegion": "$(DEVELOPMENT_LANGUAGE)",
+                "CFBundleLocalizations": ["en", "it"],
+                "CFBundleAllowMixedLocalizations": true,
                 "NSExtension": [
                     "NSExtensionPointIdentifier": "com.apple.widgetkit-extension"
                 ],
@@ -55,6 +65,7 @@ let project = Project(
                 "Widget/**",
                 "Sources/Shared/**"
             ],
+            resources: ["Resources/**"],
             entitlements: .file(path: "DeepWeatherWidget.entitlements"),
             settings: .settings(base: [
                 "SWIFT_VERSION": "6.0",

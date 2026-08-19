@@ -92,7 +92,12 @@ final class WeatherStore {
         }
     }
 
-    var useMetric: Bool = true {
+    /// Automatically derives default measurement system (Metric vs Imperial) from the device Locale.
+    public static var defaultUseMetric: Bool {
+        Locale.autoupdatingCurrent.measurementSystem != .us
+    }
+
+    var useMetric: Bool = WeatherStore.defaultUseMetric {
         didSet {
             persistSettings()
             recomputeDerivedState()
@@ -250,7 +255,7 @@ final class WeatherStore {
         weekday.dateFormat = "EEE"
         self.weekdayFormatter = weekday
 
-        self.useMetric = defaults.object(forKey: Self.useMetricKey) as? Bool ?? (UserDefaults.standard.object(forKey: Self.useMetricKey) as? Bool ?? true)
+        self.useMetric = defaults.object(forKey: Self.useMetricKey) as? Bool ?? (UserDefaults.standard.object(forKey: Self.useMetricKey) as? Bool ?? Self.defaultUseMetric)
         self.refreshIntervalMinutes = defaults.object(forKey: Self.refreshIntervalKey) as? Int ?? (UserDefaults.standard.object(forKey: Self.refreshIntervalKey) as? Int ?? 15)
         self.dailySummaryEnabled = defaults.object(forKey: Self.dailySummaryEnabledKey) as? Bool ?? (UserDefaults.standard.object(forKey: Self.dailySummaryEnabledKey) as? Bool ?? false)
         self.dailySummaryHour = defaults.object(forKey: Self.dailySummaryHourKey) as? Int ?? (UserDefaults.standard.object(forKey: Self.dailySummaryHourKey) as? Int ?? 8)

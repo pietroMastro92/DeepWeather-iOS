@@ -283,9 +283,3 @@ struct DeepWeatherWidgetBundle: WidgetBundle {
         DeepWeatherWidget()
     }
 }
-
-#Preview("Small", as: .systemSmall) {
-    DeepWeatherWidget()
-} timeline: {
-    DeepWeatherEntry(date: Date(), weather: nil, locationName: "Rome", useMetric: true, lastUpdated: nil)
-}

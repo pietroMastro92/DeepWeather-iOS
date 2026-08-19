@@ -1,8 +1,9 @@
 import Foundation
 
-enum WeatherAnimationKind {
+enum WeatherAnimationKind: Equatable {
     case sun
     case moon
+    case partlyCloudy
     case cloud
     case fog
     case rain
@@ -59,12 +60,12 @@ enum WeatherIconMapper {
         }
     }
 
-    /// Maps weather codes to a continuous animation style for the hero icon.
+    /// Maps weather codes to a continuous animation style for the hero icon and sky backdrop.
     static func animationKind(for code: String?, isDay: Bool) -> WeatherAnimationKind {
-        guard let code, let value = Int(code) else { return .cloud }
+        guard let code, let value = Int(code) else { return isDay ? .partlyCloudy : .moon }
         switch value {
         case 113: return isDay ? .sun : .moon
-        case 116: return isDay ? .cloud : .moon
+        case 116: return .partlyCloudy
         case 119, 122: return .cloud
         case 143, 248, 260: return .fog
         case 176, 185, 263, 266, 281, 284, 293, 296, 299, 302, 305, 308,
@@ -72,7 +73,7 @@ enum WeatherIconMapper {
         case 179, 182, 227, 230, 320, 323, 326, 329, 332, 335, 338, 350,
              368, 371: return .snow
         case 200, 386, 389, 392, 395: return .storm
-        default: return .cloud
+        default: return isDay ? .partlyCloudy : .cloud
         }
     }
 }

@@ -8,11 +8,13 @@ struct IOSSettingsView: View {
     @State private var showSearch = false
     @State private var showResetSetupAlert = false
     @State private var isManualRefreshing = false
+    @State private var showDemoShowcase = false
 
     var body: some View {
         NavigationStack {
             Form {
                 headerSection
+                demoShowcaseSection
                 locationSection
                 providerSection
                 unitsSection
@@ -31,6 +33,9 @@ struct IOSSettingsView: View {
             }
             .sheet(isPresented: $showSearch) {
                 IOSLocationSearchView(store: store)
+            }
+            .fullScreenCover(isPresented: $showDemoShowcase) {
+                WeatherAnimationShowcaseView()
             }
             .alert(String(localized: "Restart initial setup"), isPresented: $showResetSetupAlert) {
                 Button(String(localized: "Cancel"), role: .cancel) {}
@@ -81,6 +86,39 @@ struct IOSSettingsView: View {
                 }
             }
             .padding(.vertical, 6)
+        }
+    }
+
+    // MARK: - Demo Showcase Section
+
+    private var demoShowcaseSection: some View {
+        Section {
+            Button {
+                showDemoShowcase = true
+            } label: {
+                HStack(spacing: 12) {
+                    SettingsIconBadge(symbol: "sparkles.tv", color: .purple)
+
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Showcase Animazioni Meteo")
+                            .font(.body.weight(.semibold))
+                            .foregroundStyle(.primary)
+                        Text("Valida e ispeziona tutte le 9 condizioni fotorealistiche")
+                            .font(.caption2)
+                            .foregroundStyle(.secondary)
+                    }
+
+                    Spacer()
+
+                    Image(systemName: "chevron.right")
+                        .font(.system(size: 13, weight: .semibold))
+                        .foregroundStyle(.tertiary)
+                }
+            }
+        } header: {
+            Text("Demo & Validazione")
+        } footer: {
+            Text("Esplora e valida tutte le modalità meteo con controlli in tempo reale e simulatore di movimento.")
         }
     }
 
@@ -220,7 +258,7 @@ struct IOSSettingsView: View {
             HStack {
                 SettingsIconBadge(symbol: "ruler.fill", color: .orange)
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(store.useMetric ? "Metric system" : "Imperial system")
+                    Text(store.useMetric ? String(localized: "Metric system") : String(localized: "Imperial system"))
                         .font(.subheadline.weight(.medium))
                     Text(store.useMetric ? "°C, km/h, mm, hPa, km" : "°F, mph, in, inHg, mi")
                         .font(.caption2)

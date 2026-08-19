@@ -13,6 +13,7 @@ struct DashboardView: View {
     @State private var showSettings = false
     @State private var showAddLocation = false
     @State private var showSunShadowMap = ProcessInfo.processInfo.arguments.contains("-showSunShadowMap")
+    @State private var showDemoShowcase = ProcessInfo.processInfo.arguments.contains("-showDemoShowcase")
     @State private var isVerticalScrolling = false
 
     // MARK: - Computed Properties
@@ -77,6 +78,9 @@ struct DashboardView: View {
             .sheet(isPresented: $showAddLocation) {
                 IOSLocationSearchView(store: store)
             }
+            .fullScreenCover(isPresented: $showDemoShowcase) {
+                WeatherAnimationShowcaseView()
+            }
             .fullScreenCover(isPresented: $showSunShadowMap) {
                 if let activePage {
                     SunShadowMapView(store: store, page: activePage)
@@ -102,6 +106,9 @@ struct DashboardView: View {
                 if ProcessInfo.processInfo.arguments.contains("-showSunShadowMap") {
                     showSunShadowMap = true
                 }
+                if ProcessInfo.processInfo.arguments.contains("-showDemoShowcase") {
+                    showDemoShowcase = true
+                }
             }
             .onChange(of: store.selectedLocationID) { _, _ in
                 syncPageIndexFromStore()
@@ -118,11 +125,14 @@ struct DashboardView: View {
     // MARK: - Subviews
 
     private var skyBackgroundView: some View {
-        AnimatedWeatherBackgroundView(
+        let lat = activePage?.latitude ?? store.automaticLatitude ?? 45.0
+        return AnimatedWeatherBackgroundView(
             gradient: activeTheme.heroGradient,
             isNight: !activeIsDay,
             showsStars: !activeIsDay,
-            weatherKind: activeAnimationKind
+            weatherKind: activeAnimationKind,
+            date: Date(),
+            latitude: lat
         )
         .ignoresSafeArea()
         .animation(.easeInOut(duration: 0.4), value: themeKey)
@@ -173,6 +183,24 @@ struct DashboardView: View {
                     .liquidGlassCircle(materialOpacity: 0.85)
             }
             .accessibilityLabel(String(localized: "Add location"))
+
+            Spacer()
+
+            Button {
+                showDemoShowcase = true
+            } label: {
+                HStack(spacing: 5) {
+                    Image(systemName: "sparkles")
+                        .font(.system(size: 14, weight: .semibold))
+                    Text("Demo")
+                        .font(.system(size: 13, weight: .bold))
+                }
+                .foregroundStyle(.white)
+                .padding(.horizontal, 14)
+                .frame(height: 44)
+                .liquidGlassCapsule(materialOpacity: 0.85)
+            }
+            .accessibilityLabel("Demo Animazioni Meteo")
 
             Spacer()
 

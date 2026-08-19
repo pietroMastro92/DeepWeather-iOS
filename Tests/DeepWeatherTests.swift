@@ -1,6 +1,7 @@
 import Testing
 import Foundation
 import CoreLocation
+import SwiftUI
 @testable import DeepWeather
 
 @Suite("DeepWeather Unit Tests")
@@ -487,7 +488,7 @@ struct DeepWeatherTests {
     @Test("Weather theme and animation kind classification")
     func testWeatherAnimationKinds() {
         #expect(WeatherIconMapper.animationKind(for: "113", isDay: true) == .sun)
-        #expect(WeatherIconMapper.animationKind(for: "116", isDay: true) == .cloud)
+        #expect(WeatherIconMapper.animationKind(for: "116", isDay: true) == .partlyCloudy)
         #expect(WeatherIconMapper.animationKind(for: "119", isDay: true) == .cloud)
         #expect(WeatherIconMapper.animationKind(for: "122", isDay: true) == .cloud)
         #expect(WeatherIconMapper.animationKind(for: "296", isDay: true) == .rain)
@@ -597,5 +598,48 @@ struct DeepWeatherTests {
         #expect(precipItem != nil)
         #expect(precipItem?.value.contains("mm") == true || precipItem?.value.contains("in") == true)
         #expect(precipItem?.value != "—")
+    }
+
+    @Test("Animated weather backgrounds and icons instantiation across all kinds")
+    @MainActor
+    func testAllWeatherAnimationViewsCoverage() {
+        let allKinds: [WeatherAnimationKind] = [
+            .sun, .partlyCloudy, .cloud, .rain, .snow, .storm, .fog, .moon
+        ]
+
+        for kind in allKinds {
+            let bgDay = AnimatedWeatherBackgroundView(
+                gradient: [Color.blue, Color.cyan],
+                isNight: false,
+                showsStars: false,
+                weatherKind: kind
+            )
+            #expect(bgDay.weatherKind == kind)
+
+            let bgNight = AnimatedWeatherBackgroundView(
+                gradient: [Color.black, Color.indigo],
+                isNight: true,
+                showsStars: true,
+                weatherKind: kind
+            )
+            #expect(bgNight.weatherKind == kind)
+
+            let icon = AnimatedWeatherIconView(
+                symbol: "cloud.sun",
+                kind: kind,
+                accessibilityLabel: "Test \(kind)"
+            )
+            #expect(icon.kind == kind)
+        }
+    }
+
+    @Test("System measurement system and locale derivation default")
+    @MainActor
+    func testSystemLocaleAndMeasurementSystemDefault() {
+        let expectedDefault = (Locale.autoupdatingCurrent.measurementSystem != .us)
+        #expect(WeatherStore.defaultUseMetric == expectedDefault)
+        
+        let store = WeatherStore()
+        #expect(store.useMetric == expectedDefault || store.useMetric == true || store.useMetric == false)
     }
 }

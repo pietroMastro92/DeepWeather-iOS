@@ -9,7 +9,9 @@ struct DeepWeatherIOSApp: App {
     var body: some Scene {
         WindowGroup {
             Group {
-                if !store.isOnboarded {
+                if ProcessInfo.processInfo.arguments.contains("-showDemoShowcase") || ProcessInfo.processInfo.arguments.contains("-demoScene") {
+                    WeatherAnimationShowcaseView()
+                } else if !store.isOnboarded {
                     OnboardingWizardView(store: store, locationManager: locationManager)
                 } else {
                     DashboardView(store: store, locationManager: locationManager)

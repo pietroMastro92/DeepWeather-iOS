@@ -50,66 +50,71 @@ extension WeatherTheme {
 
     static let partlyCloudy = WeatherTheme(
         heroGradient: [
-            Color(red: 0.30, green: 0.56, blue: 0.86),
-            Color(red: 0.42, green: 0.66, blue: 0.89),
-            Color(red: 0.50, green: 0.70, blue: 0.91)
+            Color(red: 0.22, green: 0.52, blue: 0.88),
+            Color(red: 0.36, green: 0.64, blue: 0.92),
+            Color(red: 0.50, green: 0.72, blue: 0.94)
         ],
-        accent: Color(red: 0.98, green: 0.75, blue: 0.25),
+        accent: Color(red: 1.0, green: 0.82, blue: 0.25),
         heroText: .white
     )
 
     static let partlyCloudyNight = WeatherTheme(
         heroGradient: [
-            Color(red: 0.15, green: 0.20, blue: 0.44),
-            Color(red: 0.24, green: 0.28, blue: 0.52)
+            Color(red: 0.12, green: 0.16, blue: 0.38),
+            Color(red: 0.18, green: 0.24, blue: 0.46),
+            Color(red: 0.24, green: 0.30, blue: 0.52)
         ],
-        accent: Color(red: 0.55, green: 0.50, blue: 0.85),
+        accent: Color(red: 0.65, green: 0.60, blue: 0.92),
         heroText: .white
     )
 
     static let cloudy = WeatherTheme(
         heroGradient: [
-            Color(red: 0.46, green: 0.54, blue: 0.66),
-            Color(red: 0.52, green: 0.60, blue: 0.70),
-            Color(red: 0.40, green: 0.48, blue: 0.60)
+            Color(red: 0.58, green: 0.64, blue: 0.72),
+            Color(red: 0.68, green: 0.73, blue: 0.80),
+            Color(red: 0.60, green: 0.66, blue: 0.74)
         ],
-        accent: Color(red: 0.60, green: 0.70, blue: 0.82),
+        accent: Color(red: 0.75, green: 0.82, blue: 0.92),
         heroText: .white
     )
 
     static let foggy = WeatherTheme(
         heroGradient: [
-            Color(red: 0.62, green: 0.66, blue: 0.72),
-            Color(red: 0.44, green: 0.49, blue: 0.58)
+            Color(red: 0.50, green: 0.58, blue: 0.68),
+            Color(red: 0.62, green: 0.68, blue: 0.76),
+            Color(red: 0.74, green: 0.78, blue: 0.84)
         ],
-        accent: Color(red: 0.55, green: 0.58, blue: 0.65),
+        accent: Color(red: 0.78, green: 0.84, blue: 0.92),
         heroText: .white
     )
 
     static let rainy = WeatherTheme(
         heroGradient: [
-            Color(red: 0.38, green: 0.48, blue: 0.64),
-            Color(red: 0.20, green: 0.28, blue: 0.46)
+            Color(red: 0.30, green: 0.38, blue: 0.50),
+            Color(red: 0.22, green: 0.30, blue: 0.42),
+            Color(red: 0.16, green: 0.22, blue: 0.34)
         ],
-        accent: Color(red: 0.35, green: 0.55, blue: 0.80),
+        accent: Color(red: 0.45, green: 0.68, blue: 0.92),
         heroText: .white
     )
 
     static let snowy = WeatherTheme(
         heroGradient: [
-            Color(red: 0.45, green: 0.65, blue: 0.88),
-            Color(red: 0.62, green: 0.78, blue: 0.94)
+            Color(red: 0.48, green: 0.62, blue: 0.78),
+            Color(red: 0.62, green: 0.74, blue: 0.88),
+            Color(red: 0.75, green: 0.84, blue: 0.94)
         ],
-        accent: Color(red: 0.40, green: 0.62, blue: 0.88),
+        accent: Color(red: 0.80, green: 0.90, blue: 1.0),
         heroText: .white
     )
 
     static let stormy = WeatherTheme(
         heroGradient: [
-            Color(red: 0.38, green: 0.28, blue: 0.58),
-            Color(red: 0.16, green: 0.18, blue: 0.26)
+            Color(red: 0.24, green: 0.22, blue: 0.38),
+            Color(red: 0.16, green: 0.16, blue: 0.26),
+            Color(red: 0.10, green: 0.10, blue: 0.18)
         ],
-        accent: Color(red: 0.60, green: 0.45, blue: 0.80),
+        accent: Color(red: 0.75, green: 0.60, blue: 0.95),
         heroText: .white
     )
 }

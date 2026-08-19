@@ -23,7 +23,7 @@ struct SunShadowCardView: View {
                 // Header Row
                 HStack(alignment: .center) {
                     Label {
-                        Text("Luce & Ombra")
+                        Text(String(localized: "Luce & Ombra"))
                             .font(.headline.weight(.semibold))
                             .foregroundStyle(.white)
                     } icon: {
@@ -83,11 +83,11 @@ struct SunShadowCardView: View {
                             }
                         } else {
                             VStack(alignment: .leading, spacing: 2) {
-                                Text("Sole sotto l'orizzonte")
+                                Text(String(localized: "Sole sotto l'orizzonte"))
                                     .font(.subheadline.weight(.semibold))
                                     .foregroundStyle(.white)
                                 if let sunrise = state.milestones.sunrise {
-                                    Text("Prossima alba: \(state.milestones.formattedSunrise)")
+                                    Text(String(localized: "Prossima alba: \(state.milestones.formattedSunrise)"))
                                         .font(.caption)
                                         .foregroundStyle(.white.opacity(0.75))
                                 }
@@ -110,7 +110,7 @@ struct SunShadowCardView: View {
 
                 // Bottom Callout Strip
                 HStack {
-                    Text("Tocca per simulatore 24h e mappa 3D")
+                    Text(String(localized: "Tocca per simulatore 24h e mappa 3D"))
                         .font(.caption2.weight(.medium))
                         .foregroundStyle(.white.opacity(0.7))
                     Spacer()
