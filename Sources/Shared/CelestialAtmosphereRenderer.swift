@@ -277,32 +277,46 @@ public final class CelestialAtmosphereEngine {
                     float NdotL = dot(N, L);
                     float NdotV = dot(N, -v);
 
-                    // Pure Dark Unlit Hemisphere: only illuminate sunlit surface (NdotL > 0)
-                    if (NdotL > 0.0) {
-                        float geomIllum = saturate(lunarRegolithBRDF(NdotL, NdotV));
+                    // Micro-terrain relief along the terminator (mountain peaks and crater walls catch sunlight)
+                    float terrainBump = (lunarFBM(N * 16.0) - 0.5) * 0.07;
+                    float roughNdotL = NdotL + terrainBump;
 
-                        // Surface Maria & Highlands Albedo
-                        float albedo = sampleLunarAlbedo(N);
+                    // Smooth, natural sunlit transition (not a razor-blade cut)
+                    float sunlitWeight = smoothstep(-0.015, 0.05, roughNdotL);
 
-                        float3 sunlightColor = float3(0.96, 0.95, 0.92);
-                        float3 litSurface = albedo * geomIllum * sunlightColor * 2.5;
+                    // Surface Maria & Highlands Albedo
+                    float albedo = sampleLunarAlbedo(N);
 
-                        // Anti-aliased limb and terminator transition
-                        float terminatorAA = smoothstep(0.0, 0.025, NdotL);
-                        float edgeAA = smoothstep(1.0, 0.94, sqrt(diskDistSq));
-                        float combinedAlpha = edgeAA * terminatorAA;
+                    // Radiant pure silver-white sunlight
+                    float geomIllum = saturate(lunarRegolithBRDF(max(0.0, NdotL), NdotV));
+                    float3 sunlightColor = float3(1.18, 1.20, 1.26);
+                    float3 litSurface = albedo * geomIllum * sunlightColor * 4.0;
 
-                        moonPixel = litSurface * combinedAlpha;
-                        moonAlpha = combinedAlpha;
-                    }
+                    // Micro-regolith opposition surge (retro-reflection sheen)
+                    float3 H = normalize(L + (-v));
+                    float NdotH = saturate(dot(N, H));
+                    float regolithSheen = pow(NdotH, 8.0) * 0.50 * geomIllum;
+                    litSurface += float3(0.96, 0.98, 1.0) * regolithSheen;
+
+                    // Natural Earthshine (Luce Cinerea / da Vinci Glow) for the 3D dark hemisphere
+                    float3 earthshineColor = float3(0.045, 0.065, 0.095);
+                    float unlitHemisphere = smoothstep(0.05, -0.04, roughNdotL);
+                    float3 unlitSurface = albedo * earthshineColor * unlitHemisphere;
+
+                    float3 totalLunarSurface = litSurface * sunlitWeight + unlitSurface;
+
+                    float edgeAA = smoothstep(1.0, 0.94, sqrt(diskDistSq));
+                    moonPixel = totalLunarSurface * edgeAA;
+                    moonAlpha = edgeAA * saturate(sunlitWeight * 0.98 + unlitHemisphere * 0.40);
                 }
             }
 
-            // Strictly Concentric Moon Atmospheric Scattering Glow (scaled with illumination)
-            float moonMie = cornetteShanksPhase(cosMoon, 0.85);
-            float moonIllumFraction = saturate(uniforms.moonToSunDir.z * 0.5 + 0.5);
-            float moonHalo = (exp(-angleMoon / 0.040) * 0.06 + moonMie * 0.005) * (0.15 + 0.85 * moonIllumFraction);
-            float3 moonAtmosphereColor = float3(0.55, 0.70, 0.95) * moonHalo;
+            // Concentric Moon Atmospheric Scattering Glow & Corona
+            float moonMie = cornetteShanksPhase(cosMoon, 0.88);
+            float moonCorona = exp(-angleMoon / 0.018) * 0.45;
+            float moonMieHalo = moonMie * 0.015 + exp(-angleMoon / 0.065) * 0.20;
+            float moonHalo = moonCorona + moonMieHalo;
+            float3 moonAtmosphereColor = float3(0.65, 0.78, 1.0) * moonHalo;
 
             // ----------------------------------------------------
             // 🛠️ 3. DEBUG MODES & FINAL COMPOSITING

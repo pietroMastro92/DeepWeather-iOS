@@ -317,7 +317,7 @@ struct OpenMeteoAdapter: Sendable {
         // 3. Nearest Area
         let nearestArea: [NearestArea] = [
             NearestArea(
-                areaName: [TextValue(value: cityName ?? "Current Location")],
+                areaName: [TextValue(value: cityName ?? String(localized: "Current location"))],
                 country: [TextValue(value: countryName ?? "")],
                 region: nil,
                 latitude: String(format: "%.4f", om.latitude),

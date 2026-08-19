@@ -251,7 +251,9 @@ extension DeepWeatherWidgetEntryView {
         }
 
         var conditionText: String {
-            entry.weather?.currentCondition?.first?.conditionDescription ?? ""
+            let code = entry.weather?.currentCondition?.first?.weatherCode
+            let fallback = entry.weather?.currentCondition?.first?.conditionDescription
+            return WeatherConditionFormatter.localizedDescription(for: code, isDay: isDay, fallback: fallback)
         }
 
         var hasWeather: Bool {
@@ -259,7 +261,7 @@ extension DeepWeatherWidgetEntryView {
         }
 
         var cityText: String {
-            entry.locationName ?? String(localized: "Current location", comment: "Widget")
+            entry.locationName ?? String(localized: "Current location")
         }
     }
 }

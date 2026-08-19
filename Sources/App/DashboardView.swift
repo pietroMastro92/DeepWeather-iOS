@@ -192,7 +192,7 @@ struct DashboardView: View {
                 HStack(spacing: 5) {
                     Image(systemName: "sparkles")
                         .font(.system(size: 14, weight: .semibold))
-                    Text("Demo")
+                    Text(String(localized: "Demo"))
                         .font(.system(size: 13, weight: .bold))
                 }
                 .foregroundStyle(.white)
@@ -200,7 +200,7 @@ struct DashboardView: View {
                 .frame(height: 44)
                 .liquidGlassCapsule(materialOpacity: 0.85)
             }
-            .accessibilityLabel("Demo Animazioni Meteo")
+            .accessibilityLabel(String(localized: "Showcase Animazioni Meteo"))
 
             Spacer()
 

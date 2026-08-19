@@ -100,7 +100,7 @@ struct WeatherAnimationShowcaseView: View {
     private var topNavigationBar: some View {
         HStack(alignment: .center) {
             VStack(alignment: .leading, spacing: 2) {
-                Text("Demo Animazioni")
+                Text(String(localized: "Demo Animazioni"))
                     .font(.subheadline.weight(.bold))
                     .foregroundStyle(.white)
                 Text("\(selectedIndex + 1)/\(items.count) • \(currentScene.title)")
@@ -125,7 +125,7 @@ struct WeatherAnimationShowcaseView: View {
                     .frame(width: 40, height: 40)
                     .liquidGlassCircle(materialOpacity: 0.85)
             }
-            .accessibilityLabel("Dettagli animazione")
+            .accessibilityLabel(String(localized: "Dettagli animazione"))
 
             Button {
                 dismiss()
@@ -136,7 +136,7 @@ struct WeatherAnimationShowcaseView: View {
                     .frame(width: 40, height: 40)
                     .liquidGlassCircle(materialOpacity: 0.85)
             }
-            .accessibilityLabel("Chiudi")
+            .accessibilityLabel(String(localized: "Close"))
         }
         .padding(.horizontal, 20)
         .padding(.top, 8)
@@ -195,10 +195,10 @@ struct WeatherAnimationShowcaseView: View {
                     .foregroundStyle(currentScene.theme.accent)
 
                 VStack(alignment: .leading, spacing: 1) {
-                    Text("Caratteristiche Realismo")
+                    Text(String(localized: "Caratteristiche Realismo"))
                         .font(.subheadline.weight(.bold))
                         .foregroundStyle(.white)
-                    Text("Algoritmi procedurali in tempo reale")
+                    Text(String(localized: "Algoritmi procedurali in tempo reale"))
                         .font(.caption2)
                         .foregroundStyle(.white.opacity(0.75))
                 }

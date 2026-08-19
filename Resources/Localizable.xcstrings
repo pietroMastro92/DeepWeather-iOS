@@ -3842,6 +3842,380 @@
           }
         }
       }
+    },
+    "Demo Animazioni": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Animations Showcase"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demo Animazioni"
+          }
+        }
+      }
+    },
+    "Dettagli animazione": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Animation details"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dettagli animazione"
+          }
+        }
+      }
+    },
+    "Caratteristiche Realismo": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Realism Features"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Caratteristiche Realismo"
+          }
+        }
+      }
+    },
+    "Algoritmi procedurali in tempo reale": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Real-time procedural algorithms"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Algoritmi procedurali in tempo reale"
+          }
+        }
+      }
+    },
+    "(Simulazione)": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(Simulation)"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(Simulazione)"
+          }
+        }
+      }
+    },
+    "(Ora locale)": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(Local time)"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(Ora locale)"
+          }
+        }
+      }
+    },
+    "Showcase Animazioni Meteo": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weather Animations Showcase"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Showcase Animazioni Meteo"
+          }
+        }
+      }
+    },
+    "Valida e ispeziona tutte le 9 condizioni fotorealistiche": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Validate and inspect all 9 photorealistic conditions"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Valida e ispeziona tutte le 9 condizioni fotorealistiche"
+          }
+        }
+      }
+    },
+    "Demo & Validazione": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demo & Validation"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demo & Validazione"
+          }
+        }
+      }
+    },
+    "Esplora e valida tutte le modalità meteo con controlli in tempo reale e simulatore di movimento.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Explore and validate all weather modes with real-time controls and motion simulator."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esplora e valida tutte le modalità meteo con controlli in tempo reale e simulatore di movimento."
+          }
+        }
+      }
+    },
+    "v1.0 (Build 1) • Local-first": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "v1.0 (Build 1) • Local-first"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "v1.0 (Build 1) • Locale prima di tutto"
+          }
+        }
+      }
+    },
+    "Zero analytics / No tracking": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zero analytics / No tracking"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zero analisi / Nessun tracciamento"
+          }
+        }
+      }
+    },
+    "Prossima alba: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Next sunrise: %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prossima alba: %@"
+          }
+        }
+      }
+    },
+    "Prossima alba: \\(state.milestones.formattedSunrise)": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Next sunrise: %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prossima alba: %@"
+          }
+        }
+      }
+    },
+    "Official source: \\(alert.source)": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Official source: %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fonte ufficiale: %@"
+          }
+        }
+      }
+    },
+    "Additional alert: \\(others)": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Additional alert: %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Allerta aggiuntiva: %@"
+          }
+        }
+      }
+    },
+    "Lato \\(shadowDir) in ombra": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shaded side: %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lato %@ in ombra"
+          }
+        }
+      }
+    },
+    "Lato \\(sunDir) al sole": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunny side: %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lato %@ al sole"
+          }
+        }
+      }
+    },
+    "Expected maximum temperatures up to \\(maxTDisplay) with high bioclimatic stress. Avoid exposure during peak hours and stay hydrated.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expected maximum temperatures up to %@ with high bioclimatic stress. Avoid exposure during peak hours and stay hydrated."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Previste temperature massime fino a %@ con elevato stress bioclimatico. Evitare l'esposizione nelle ore centrali e idratarsi."
+          }
+        }
+      }
+    },
+    "Expected minimum temperatures down to \\(minTDisplay) with frost and ground icing risk. Exercise extreme caution while driving.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expected minimum temperatures down to %@ with frost and ground icing risk. Exercise extreme caution while driving."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Previste temperature minime fino a %@ con rischio di gelate e ghiaccio al suolo. Prestare la massima attenzione alla guida."
+          }
+        }
+      }
+    },
+    "Expected wind gusts up to \\(windDisplay) with possible disruption to travel and rough seas.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expected wind gusts up to %@ with possible disruption to travel and rough seas."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Previste raffiche di vento fino a %@ con possibili disagi alla viabilità e mareggiate."
+          }
+        }
+      }
+    },
+    "Demo": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demo"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demo"
+          }
+        }
+      }
     }
   },
   "version": "1.0"

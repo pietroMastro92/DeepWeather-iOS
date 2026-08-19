@@ -81,34 +81,65 @@ enum WeatherIconMapper {
 /// Provides fully localized weather condition descriptions for iOS UI
 enum WeatherConditionFormatter {
     static func localizedDescription(for code: String?, isDay: Bool, fallback: String? = nil) -> String {
-        guard let code, let value = Int(code) else {
-            return fallback ?? String(localized: "Partly cloudy")
+        if let code, let value = Int(code) {
+            switch value {
+            case 113:
+                return isDay ? String(localized: "Sunny") : String(localized: "Clear")
+            case 116:
+                return String(localized: "Partly cloudy")
+            case 119:
+                return String(localized: "Cloudy")
+            case 122:
+                return String(localized: "Overcast")
+            case 143:
+                return String(localized: "Mist")
+            case 248, 260:
+                return String(localized: "Fog")
+            case 176, 263, 266, 281, 284, 293, 296:
+                return String(localized: "Light rain")
+            case 299, 302, 305, 308, 353, 356, 359:
+                return String(localized: "Rain")
+            case 185, 311, 314, 317, 362, 365, 374, 377:
+                return String(localized: "Sleet")
+            case 179, 182, 227, 230, 320, 323, 326, 329, 332, 335, 338, 350, 368, 371:
+                return String(localized: "Snow")
+            case 200, 386, 389, 392, 395:
+                return String(localized: "Thunderstorm")
+            default:
+                break
+            }
         }
-        switch value {
-        case 113:
-            return isDay ? String(localized: "Sunny") : String(localized: "Clear")
-        case 116:
-            return String(localized: "Partly cloudy")
-        case 119:
-            return String(localized: "Cloudy")
-        case 122:
-            return String(localized: "Overcast")
-        case 143:
-            return String(localized: "Mist")
-        case 248, 260:
-            return String(localized: "Fog")
-        case 176, 263, 266, 293, 296:
-            return String(localized: "Light rain")
-        case 299, 302, 305, 308, 353, 356, 359:
-            return String(localized: "Rain")
-        case 185, 311, 314, 317, 362, 365, 374, 377:
-            return String(localized: "Sleet")
-        case 179, 182, 227, 230, 320, 323, 326, 329, 332, 335, 338, 350, 368, 371:
-            return String(localized: "Snow")
-        case 200, 386, 389, 392, 395:
-            return String(localized: "Thunderstorm")
-        default:
-            return fallback ?? String(localized: "Partly cloudy")
+
+        if let fallback, !fallback.isEmpty {
+            let lower = fallback.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
+            if lower.contains("thunder") || lower.contains("storm") {
+                return String(localized: "Thunderstorm")
+            } else if lower.contains("snow") || lower.contains("blizzard") || lower.contains("ice") {
+                return String(localized: "Snow")
+            } else if lower.contains("sleet") {
+                return String(localized: "Sleet")
+            } else if lower.contains("drizzle") || lower.contains("light rain") {
+                return String(localized: "Light rain")
+            } else if lower.contains("rain") || lower.contains("shower") {
+                return String(localized: "Rain")
+            } else if lower.contains("fog") {
+                return String(localized: "Fog")
+            } else if lower.contains("mist") {
+                return String(localized: "Mist")
+            } else if lower.contains("overcast") {
+                return String(localized: "Overcast")
+            } else if lower.contains("partly cloudy") || lower.contains("patchy") {
+                return String(localized: "Partly cloudy")
+            } else if lower.contains("cloud") {
+                return String(localized: "Cloudy")
+            } else if lower.contains("sun") {
+                return String(localized: "Sunny")
+            } else if lower.contains("clear") {
+                return isDay ? String(localized: "Sunny") : String(localized: "Clear")
+            }
+            return fallback
         }
+
+        return isDay ? String(localized: "Partly cloudy") : String(localized: "Clear")
     }
 }

@@ -32,10 +32,17 @@ struct SunShadowMapView: View {
     // MARK: - Enums
 
     enum MapStyleOption: String, CaseIterable, Identifiable {
-        case standardVector = "Vettoriale Chiara"
-        case darkVector = "Vettoriale Scura"
+        case standardVector = "standard_vector"
+        case darkVector = "dark_vector"
 
         var id: String { rawValue }
+
+        var title: String {
+            switch self {
+            case .standardVector: return String(localized: "Vettoriale Chiara")
+            case .darkVector: return String(localized: "Vettoriale Scura")
+            }
+        }
 
         var icon: String {
             switch self {
@@ -215,11 +222,11 @@ struct SunShadowMapView: View {
                         .foregroundStyle(.yellow)
 
                     if isSimulatingCustomTime {
-                        Text("(Simulazione)")
+                        Text(String(localized: "(Simulazione)"))
                             .font(.system(size: 10))
                             .foregroundStyle(.white.opacity(0.75))
                     } else {
-                        Text("(Ora locale)")
+                        Text(String(localized: "(Ora locale)"))
                             .font(.system(size: 10))
                             .foregroundStyle(.white.opacity(0.75))
                     }
@@ -233,16 +240,16 @@ struct SunShadowMapView: View {
 
             // Map Style Switcher Menu
             Menu {
-                Picker("Stile Mappa", selection: $mapStyleSelection) {
+                Picker(String(localized: "Stile Mappa"), selection: $mapStyleSelection) {
                     ForEach(MapStyleOption.allCases) { option in
-                        Label(option.rawValue, systemImage: option.icon).tag(option)
+                        Label(option.title, systemImage: option.icon).tag(option)
                     }
                 }
 
                 Button {
                     centerOnLocation()
                 } label: {
-                    Label("Centra Posizione", systemImage: "location.fill")
+                    Label(String(localized: "Centra Posizione"), systemImage: "location.fill")
                 }
             } label: {
                 Image(systemName: "square.2.layers.3d")
@@ -343,7 +350,7 @@ struct SunShadowMapView: View {
                         in: 0...1439,
                         step: 5
                     ) {
-                        Text("Orario")
+                        Text(String(localized: "Orario"))
                     } minimumValueLabel: {
                         Text("00:00")
                             .font(.system(size: 9, weight: .bold, design: .monospaced))
@@ -361,7 +368,7 @@ struct SunShadowMapView: View {
                     Button {
                         resetToCurrentTime()
                     } label: {
-                        Text("Ora")
+                        Text(String(localized: "Ora"))
                             .font(.system(size: 10, weight: .bold))
                             .padding(.horizontal, 8)
                             .padding(.vertical, 5)
@@ -373,16 +380,16 @@ struct SunShadowMapView: View {
                 // Solar Milestone Quick Jump Buttons
                 HStack(spacing: 5) {
                     if let sunrise = solarState.milestones.sunrise {
-                        milestonePill(title: "Alba", date: sunrise, icon: "sunrise.fill")
+                        milestonePill(title: String(localized: "Alba"), date: sunrise, icon: "sunrise.fill")
                     }
                     if let noon = solarState.milestones.solarNoon {
-                        milestonePill(title: "Mezzogiorno", date: noon, icon: "sun.max.fill")
+                        milestonePill(title: String(localized: "Mezzogiorno"), date: noon, icon: "sun.max.fill")
                     }
                     if let golden = solarState.milestones.goldenHourEveningStart {
-                        milestonePill(title: "Golden Hour", date: golden, icon: "sun.haze.fill")
+                        milestonePill(title: String(localized: "Golden Hour"), date: golden, icon: "sun.haze.fill")
                     }
                     if let sunset = solarState.milestones.sunset {
-                        milestonePill(title: "Tramonto", date: sunset, icon: "sunset.fill")
+                        milestonePill(title: String(localized: "Tramonto"), date: sunset, icon: "sunset.fill")
                     }
                 }
             }
@@ -392,25 +399,25 @@ struct SunShadowMapView: View {
             // Metrics Summary
             HStack(spacing: 6) {
                 MetricPill(
-                    title: "Elevazione",
+                    title: String(localized: "Elevazione"),
                     value: String(format: "%.1f°", solarState.solarPosition.elevation),
                     symbol: "sun.max.fill",
                     color: .yellow
                 )
                 MetricPill(
-                    title: "Azimut",
+                    title: String(localized: "Azimut"),
                     value: "\(Int(solarState.solarPosition.azimuth))° \(SolarShadowEngine.shortCompass(for: solarState.solarPosition.azimuth))",
                     symbol: "safari.fill",
                     color: .orange
                 )
                 MetricPill(
-                    title: "Edifici",
+                    title: String(localized: "Edifici"),
                     value: "\(buildings.count)",
                     symbol: "building.2.fill",
                     color: .indigo
                 )
                 MetricPill(
-                    title: "UV / Nubi",
+                    title: String(localized: "UV / Nubi"),
                     value: "\(solarState.uvIndex) / \(solarState.cloudCoverPercent)%",
                     symbol: "cloud.sun.fill",
                     color: .cyan

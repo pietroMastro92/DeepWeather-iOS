@@ -77,10 +77,10 @@ struct IOSSettingsView: View {
                 VStack(alignment: .leading, spacing: 3) {
                     Text("DeepWeather")
                         .font(.headline.weight(.bold))
-                    Text("Weather, beautifully animated.")
+                    Text(String(localized: "Weather, beautifully animated."))
                         .font(.caption)
                         .foregroundStyle(.secondary)
-                    Text("v1.0 (Build 1) • Local-first")
+                    Text(String(localized: "v1.0 (Build 1) • Local-first"))
                         .font(.caption2.weight(.medium))
                         .foregroundStyle(.tertiary)
                 }
@@ -100,10 +100,10 @@ struct IOSSettingsView: View {
                     SettingsIconBadge(symbol: "sparkles.tv", color: .purple)
 
                     VStack(alignment: .leading, spacing: 2) {
-                        Text("Showcase Animazioni Meteo")
+                        Text(String(localized: "Showcase Animazioni Meteo"))
                             .font(.body.weight(.semibold))
                             .foregroundStyle(.primary)
-                        Text("Valida e ispeziona tutte le 9 condizioni fotorealistiche")
+                        Text(String(localized: "Valida e ispeziona tutte le 9 condizioni fotorealistiche"))
                             .font(.caption2)
                             .foregroundStyle(.secondary)
                     }
@@ -116,9 +116,9 @@ struct IOSSettingsView: View {
                 }
             }
         } header: {
-            Text("Demo & Validazione")
+            Text(String(localized: "Demo & Validazione"))
         } footer: {
-            Text("Esplora e valida tutte le modalità meteo con controlli in tempo reale e simulatore di movimento.")
+            Text(String(localized: "Esplora e valida tutte le modalità meteo con controlli in tempo reale e simulatore di movimento."))
         }
     }
 
@@ -382,7 +382,7 @@ struct IOSSettingsView: View {
         Section(String(localized: "Information")) {
             LabeledContent(String(localized: "Weather data"), value: "Open-Meteo & Wttr.in")
             LabeledContent(String(localized: "Geocoding"), value: "Apple MapKit")
-            LabeledContent(String(localized: "Privacy"), value: "Zero analytics / No tracking")
+            LabeledContent(String(localized: "Privacy"), value: String(localized: "Zero analytics / No tracking"))
         }
     }
 
